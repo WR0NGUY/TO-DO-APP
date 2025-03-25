@@ -51,4 +51,9 @@ function addTask() {
 // Event listener for add task button
 addTaskBtn.addEventListener('click', addTask);
 
-
+// Allow pressing "Enter" to add a task
+taskInput.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+    addTask();
+  }
+});
