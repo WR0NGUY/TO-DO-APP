@@ -1,0 +1,151 @@
+/* General styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(45deg, #f06, #48c6ef);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .input-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"] {
+    width: 75%;
+    padding: 12px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  input[type="text"]:focus {
+    border: 2px solid #ff6f61;
+    box-shadow: 0 0 10px rgba(255, 111, 97, 0.5);
+  }
+  
+  button {
+    padding: 12px 20px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1rem;
+  }
+  
+  button:hover {
+    background-color: #ff4f3b;
+    transform: translateY(-3px);
+  }
+  
+  button:active {
+    transform: translateY(2px);
+  }
+  
+  /* Task Table Layout */
+  .task-table {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  ul {
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+  
+  li {
+    background: #f7f7f7;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  /* Align the checkbox and delete button vertically */
+  li .task-details {
+    display: flex;
+    align-items: center;
+  }
+  
+  li .task-details input[type="checkbox"] {
+    margin-right: 15px;
+    transform: scale(1.2);
+  }
+  
+  li .task-details span {
+    flex-grow: 1;
+  }
+  
+  button.delete {
+    background-color: #ff3b30;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button.delete:hover {
+    background-color: #e02b1f;
+  }
+  
+  button.delete:active {
+    transform: translateY(2px);
+  }
+  
+  /* Completed Task Style */
+  li.completed {
+    text-decoration: line-through;
+    background-color: #d3ffd3;
+    color: #777;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 500px) {
+    .container {
+      padding: 15px;
+    }
+  
+    input[type="text"] {
+      width: 65%;
+    }
+  
+    button {
+      width: 25%;
+    }
+  }
+  
